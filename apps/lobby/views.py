@@ -12,7 +12,7 @@ from django.contrib.auth.decorators import login_required
 def infoweb(request):
     content = {
     }
-    return render(request,'home.html',content)
+    return render(request,'helloworld.html',content)
 
 @login_required
 def home(request):

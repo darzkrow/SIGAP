@@ -1,0 +1,29 @@
+{% extends 'layouts/base.html' %}
+
+{% comment %}TODO LO QUE ESTE EN TITLE APARECERA EN EL TITULO DE LA PAGINA{% endcomment %}
+{% block title %}
+  DASHBOARD
+{% endblock %}
+
+{% comment %}MUESTRA LA UBICACION ACTUAL DE{% endcomment %}
+
+{% block titlecontent %}
+<i class="fas fa-tachometer-alt">DASHBOARD</i>  
+{% endblock %}
+
+{% block titlemenu %}
+ HIDROVEN
+{% endblock %}
+{% load static%}
+{% block content %}
+  <div class="content">
+    <div class="container-fluid">
+ 
+   
+          <div class="d-flex justify-content-center">
+          <img src="{% static '/img/wallpaper.jpg'%}"  class="rounded d-flex justify-content-center" alt=" hola"></div>
+          
+     
+    </div>
+  </div>
+{% endblock %}

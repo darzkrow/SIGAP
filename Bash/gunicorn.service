@@ -1,0 +1,20 @@
+[Unit]
+Description=gunicorn daemon service
+Requires=gunicorn.socket
+After=network.target
+
+
+[Service]
+User=gfranco
+Group=www-data
+WorkingDirectory=/var/www/html/SIGAP
+ExecStart=/var/www/html/SIGAP/venv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          config.wsgi:application
+
+
+
+[Install]
+WantedBy=multi-user.target
